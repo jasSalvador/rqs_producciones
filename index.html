@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Producción y animación de eventos">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!--iconos bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo-fav.png">
+    <script defer src="./assets/script.js"></script>
+    <title>RQS Producciones</title>
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--raleway-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-custom">
+        <div class="container">
+            <div class="nav-logo d-flex align-items-center">
+                <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" class="d-block" width="80px"
+                        alt="Logo"></a>
+                <p class="fw-bold fs-5">RQS Producciones</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav fs-5 ms-auto">
+                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                    <a class="nav-link" href="#packs">Packs</a>
+                    <a class="nav-link" href="#galeria">Galería</a>
+                    <a class="nav-link text-nowrap" href="#nosotros">Quienes Somos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--HEADER/VIDEO/TITULO PRINCIPAL-->
+    <section class="header">
+        <div class="container title d-flex flex-column text-light justify-content-center mx-auto py-5">
+            <div class="text-center pt-5 mt-3 title-1">
+                <h1 class="fw-bold pt-5 anim-down mt-5">ARRIENDO AUDIOVISUAL</h1>
+            </div>
+            <div class="pb-5">
+                <p class="pb-2 fs-4 text-center text-black fw-bolder anim-fade-in anim-pause-1">Hacemos de tu evento un
+                    momento inolvidable
+                </p>
+            </div>
+            <div class="pt-4 text-center header-btn">
+                <a href="https://wa.me/56972140096" target="_blank" rel="noopener noreferrer">
+                    <button class="btn fs-5 fw-bolder py-2 px-5">Únete a la fiesta! <i
+                            class="bi bi-whatsapp"></i></button>
+                </a>
+            </div>
+        </div>
+        <video muted autoplay loop>
+            <source src="./assets/video/video-1.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="custom-shape-divider-bottom-1701560545">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!--3 IMAGENES-->
+    <section class="hero bg-black py-5 paused">
+        <div class="d-flex justify-content-center align-items-center py-5 my-5 mx-auto">
+            <div class="col-lg-3 col-md-3 col-sm-3 anim-down">
+                <div class="">
+                    <img src="./assets/img/eventos.jpg" class="d-block w-100 p-2" alt="Eventos corporativos">
+                </div>
+                <div class="hero-text-mov text-center mt-4 mx-auto">
+                    <ul>
+                        <li class="fw-bolder">EVENTOS</li>
+                        <li class="fw-bolder">CORPORATIVOS</li>
+                        <li class="fw-bolder">REUNIONES</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 anim-down anim-pause-1">
+                <div class="">
+                    <img src="./assets/img/celebraciones.jpeg" class="d-block w-100 p-2" alt="Celebraciones">
+                </div>
+                <div class="hero-text-mov text-center mt-4 mx-auto">
+                    <ul>
+                        <li class="fw-bolder">FIESTAS</li>
+                        <li class="fw-bolder">BODAS</li>
+                        <li class="fw-bolder">CUMPLEAÑOS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 anim-down anim-pause-2">
+                <div class="">
+                    <img src="./assets/img/dj-hero.jpg" class="d-block w-100 p-2" alt="Dj en vivo">
+                </div>
+                <div class="hero-text-mov text-center mt-4 mx-auto">
+                    <ul>
+                        <li class="fw-bolder">DJ</li>
+                        <li class="fw-bolder">ANIMACIÓN</li>
+                        <li class="fw-bolder">MUSICA EN VIVO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--NOSOTROS-->
+    <section class="main py-3 paused" id="nosotros">
+        <div class="main-cont d-flex flex-wrap justify-content-evenly align-items-center py-5">
+
+            <div class="col-xl-4 col-md-6 col-sm-6 main-img py-5 anim-right">
+                <img src="./assets/img/bienvenido.jpeg" class="w-100 d-block" alt="Dj en vivo">
+            </div>
+
+            <div class="main-text col-xl-6 col-lg-6 col-md-8 col-sm-10 text-left py-5">
+                <p class="anim-fade-in">Bienvenido</p>
+                <h2 class="text-light fw-bolder anim-left anim-pause-1">Somos RQS</h2>
+                <h3 class="fw-bolder pb-3 anim-right anim-pause-1">Expertos en diversión!</h3>
+                <p class="fs-5 text-light py-2 anim-left anim-pause-2">
+                    Nuestra pasión es llevar la música y la diversión a tus eventos, por lo que ofrecemos una amplia
+                    gama de servicios de entretenimiento y alquiler de equipos audiovisuales de alta calidad. Desde las
+                    vibrantes luces que iluminarán la pista de baile hasta los más potentes amplificadores que harán
+                    vibrar la
+                    sala, así como un servicio de banquetería excepcional y animación cautivadora, tenemos todo lo que
+                    necesitas para crear un ambiente espectacular.
+                </p>
+                <div class="pt-5 anim-fade-in anim-pause-3">
+                    <a href="https://wa.me/56972140096" target="_blank" rel="noopener noreferrer">
+                        <button class="btn fs-5 py-2 px-5 mx-auto">Contáctanos <i class="bi bi-whatsapp"></i></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--COMPROMISO-->
+    <section class="text-alianza py-5 paused">
+        <div class="text-alianza-text text-center mx-auto py-5 my-2">
+            <h2 class="pb-3 pt-3 anim-right">Nos comprometemos con tu evento</h2>
+            <p class="fw-bold pt-3 pb-5 anim-left anim-pause-1">
+                Entendemos que cada evento es único, por eso trabajamos estrechamente contigo para personalizar cada
+                detalle,
+                desde la configuración del equipo hasta la lista de reproducción musical. Nuestra misión es hacer que
+                tu día especial sea aún más memorable.
+            </p>
+        </div>
+    </section>
+
+    <!--INFO SERVICIOS-->
+    <section class="info pt-2 mb-5 paused" id="servicios">
+        <div class="container py-3">
+            <h2 class="text-start py-5 fw-bold anim-right">Tenemos todo lo necesario!</h2>
+            <div class="row justify-content-evenly">
+                <!--DJ-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-1">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-play fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">DJ</h5>
+                        <p class="info-text text-center">Experimenta la música en su máxima expresión con mezclas
+                            emocionantes.</p>
+                        <div class="overlay">
+                            <img src="./assets/img/dj-info.jpg" class="d-block w-100 p-2 border" alt="DJ">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+                <!--audio-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-1">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-speaker fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Audio</h5>
+                        <p class="info-text text-center">Sonido cristalino y potente para envolver tu evento en calidad.
+                        </p>
+                        <div class="overlay">
+                            <img src="./assets/img/audio-info.png" class="d-block w-100 p-2 border" alt="Parlante">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--iluminacion-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-1">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-brightness-alt-high fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Iluminación</h5>
+                        <p class="info-text text-center">Crea atmósferas mágicas con luces y efectos espectaculares.</p>
+                        <div class="overlay">
+                            <img src="./assets/img/illuminacion-info.jpg" class="d-block w-100 p-2 border"
+                                alt="Bola disco">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--pantallas-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-1">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-tv fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Pantallas</h5>
+                        <p class="info-text text-center">Visualiza momentos inolvidables en pantallas LED de alta
+                            definición.</p>
+                        <div class="overlay">
+                            <img src="./assets/img/pantallas-info.png" class="d-block w-100 p-2 border"
+                                alt="pantallas led">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--spider robotizado-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-2">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-robot fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Spider Robotizado</h5>
+                        <p class="info-text text-center">Un toque de futurismo con un robot luminoso y dinámico.</p>
+                        <div class="overlay">
+                            <img src="./assets/img/robots-led.png" class="d-block w-100 p-2 border" alt="robot led">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--efectos especiales-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-2">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-lightning fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Efectos especiales</h5>
+                        <p class="info-text text-center">Para añadir un toque de magia y emoción impresionante.</p>
+                        <div class="overlay">
+                            <img src="./assets/img/fiestas.jpg" class="d-block w-100 p-2 border" alt="Efecto humo">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--animacion-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-2">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-mic fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Animación</h5>
+                        <p class="info-text text-center">Entretenimiento que despierta muchas sonrisas y alegría.
+                        </p>
+                        <div class="overlay">
+                            <img src="./assets/img/animacion.jpg" class="d-block w-100 p-2 border" alt="Microfono">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <!--banqueteria-->
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 mb-4 anim-fade-in anim-pause-2">
+                    <div class="box p-4 text-light">
+                        <div class="text-center pt-4 cont-info">
+                            <i class="bi bi-emoji-smile fs-2 px-3 py-2 rounded-circle"></i>
+                        </div>
+                        <h5 class="pt-3 text-center">Banquetería</h5>
+                        <p class="info-text text-center">Sabores irresistibles que hacen de tu evento una delicia.
+                        </p>
+                        <div class="overlay">
+                            <img src="./assets/img/banqueteria.jpeg" class="d-block w-100 p-2 border"
+                                alt="Mesa banquete">
+                        </div>
+                        <div class="overlay-bg"></div>
+                    </div>
+                </div>
+
+                <div class="py-5 mb-4 text-end anim-left anim-pause-4 info-text-btn">
+                    <h3 class="fw-bold">Crearemos momentos inolvidables!</h3>
+                    <a href="https://wa.me/56972140096" target="_blank" rel="noopener noreferrer">
+                        <button class="btn fs-5 py-2 px-5 mx-auto">Contacto <i class="bi bi-whatsapp"></i></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--packs-->
+    <section class="packs py-5 mt-5 paused" id="packs">
+        <div class="container pt-4 px-3 titulo1">
+            <h2 class="pt-5 fw-bold mx-auto anim-right">Diversidad de Packs y servicios DJ</h2>
+            <h4 class="pt-2 pb-5 text-light anim-right">Seleccionados cuidadosamente para adaptarse a tus necesidades y
+                satisfacer
+                todas tus expectativas.</h4>
+        </div>
+        <div class="d-flex flex-wrap justify-content-evenly align-items-center px-4 mx-auto">
+            <!--1° acordeon-->
+            <div class="accordion col-lg-3 col-md-5 col-sm-10 anim-right anim-pause-1" id="accordion1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            PACK <span class="fs-5 ps-2 mb-1">1</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>DJ</p>
+                            <p>Iluminación</p>
+                            <p>Amplificación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            PACK <span class="fs-5 ps-2 mb-1">2</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>VDJ</p>
+                            <p>Iluminación</p>
+                            <p>Amplificación</p>
+                            <p>Proyector + telón</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            PACK <span class="fs-5 ps-2 mb-1">3</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>VDJ</p>
+                            <p>Iluminación</p>
+                            <p>Amplificación</p>
+                            <p>2 pantallas 49"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--2° acordeon-->
+            <div class="accordion col-lg-3 col-md-5 col-sm-10 anim-left anim-pause-1" id="accordion2">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            PACK <span class="fs-5 ps-2 mb-1">4</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>VDJ</p>
+                            <p>Iluminación</p>
+                            <p>Amplificación</p>
+                            <p>2 pantallas 49"</p>
+                            <p>Proyector + telón</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            PACK <span class="fs-5 ps-2 mb-1">5</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>VDJ</p>
+                            <p>Iluminación</p>
+                            <p>Amplificación</p>
+                            <p>2 pantallas 49"</p>
+                            <p>Proyector + telón</p>
+                            <p>Arco truss 6mts</p>
+                            <p>Mesón truss DJ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            6 OPCIONALES
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Spider Robotizado</p>
+                            <p>Maquína de Chispa fría</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--animacion y banqueteria-->
+            <div class="packs-text p-5 my-5 col-lg-4 col-md-8 col-sm-10 anim-fade-in anim-pause-2">
+                <h5 class="py-3"><em>Enriqueciendo aún más tu experiencia, ofrecemos servicios complementarios de
+                        <span class="fw-bolder">Animación</span>
+                        y <span class="fw-bolder">Banquetería</span>.<br><br>
+                        ¡Añade un toque de distinción a tus eventos y asegura momentos inolvidables!</em>
+                </h5>
+                <div class="d-flex gap-2">
+                    <img src="./assets/img/microfono.jpg" class="img-animacion d-block w-100" alt="animación eventos">
+                    <img src="./assets/img/mesas.jpeg" class="d-block w-100 img-banqueteria" alt="banquetería">
+                </div>
+            </div>
+        </div>
+
+        <!--form cotizacion-->
+        <div class="container pack-cotizacion d-flex flex-wrap justify-content-evenly align-items-center py-5 mt-4 mb-5 anim-left anim-pause-3"
+            id="packCotizacion">
+            <h3 class="fw-bold fs-2 text-light">¡Obtén una cotización de forma simple y rápida!</h3>
+
+            <button type="button" class="btn fs-5 py-2 px-5 align-items-center" id="btnCotizar" data-bs-toggle="modal"
+                data-bs-target="#modalForm">
+                Cotiza Aquí <i class="bi bi-check2-square fs-4 ps-2"></i>
+            </button>
+        </div>
+
+        <!--modal-form-->
+        <div class="modal fade" tabindex="-1" id="modalForm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Completa todos los datos(*)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!--FORMULARIO-->
+                        <form method="post" action="" class="d-flex flex-column px-4" id="formCotizacion">
+
+                            <div class="d-flex flex-wrap gap-3 align-items-center">
+                                <input type="text" name="nombre" id="nombre" autocapitalize="words"
+                                    class="mt-2 p-2 w-100 rounded-2 bg-light" placeholder="Nombre*" required
+                                    pattern="[a-zA-Z]+" title="Solo caracteres alfabéticos">
+
+                                <input type="text" name="apellido" id="apellido" autocapitalize="words"
+                                    class="mb-2 p-2 w-100 rounded-2 bg-light" placeholder="Apellido*" required
+                                    pattern="^[a-zA-Z]+(?: [a-zA-Z]+){0,2}$" title="Solo caracteres alfabéticos">
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-center">
+                                <input type="text" id="email" name="email" class="my-2 p-2 w-100 rounded-2 bg-light"
+                                    placeholder="Email*" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                                    title="Ingresa un correo válido">
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-center">
+                                <input type="text" id="comuna" name="comuna" autocapitalize="words"
+                                    class="my-2 p-2 w-100 rounded-2 bg-light" placeholder="Comuna*" required
+                                    pattern="^[a-zA-Z]+(?: [a-zA-Z]+){0,2}$" title="Solo caracteres alfabéticos">
+                            </div>
+
+                            <div class="d-flex flex-wrap align-items-center gap-3">
+
+                                <input type="number" name="asistentes" id="asistentes"
+                                    class="mt-2 p-2 w-100 rounded-2 bg-light" placeholder="N° de personas*" required>
+
+                                <select name="pack" id="pack" class="mb-2 py-2 px-3 w-100 rounded-2 bg-light" required>
+                                    <option selected>Selecciona un Pack* </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-3 align-items-center">
+
+                                <div class="d-flex flex-column mb-2">
+                                    <label for="fecha">Fecha del evento*</label>
+                                    <input type="date" name="fecha" id="fecha" class="p-2 w-100 rounded-2 bg-light"
+                                        required>
+                                </div>
+
+                                <div class="d-flex flex-column mb-2">
+                                    <label for="inicio" class="text-nowrap">Hora de inicio*</label>
+                                    <input type="time" name="inicio" id="inicio"
+                                        class="py-2 px-3 w-100 rounded-2 bg-light" required>
+                                </div>
+
+                                <div class="d-flex flex-column mb-2">
+                                    <label for="termino" class="text-nowrap">Hora termino*</label>
+                                    <input type="time" name="termino" id="termino"
+                                        class="py-2 px-3 w-100 rounded-2 bg-light" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2 align-items-center">
+                                <!-- <label for="input_comentario">Mensaje:*</label> -->
+                                <textarea id="mensaje" name="mensaje" cols="6" rows="5"
+                                    class="my-2 p-2 w-100 rounded-2 bg-light" placeholder="Mensaje*"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-enviar" id="btnEnviar">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" name="send" class="btn btn-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--GALERIA-->
+    <section class="galeria pb-4 paused" id="galeria">
+
+        <div class="titulo-galeria py-5">
+            <h2 class="text-center py-5 mt-4 fw-bold anim-fade-in">Explora nuestra experiencia</h2>
+        </div>
+        <div
+            class="container galeria-contenedor d-flex flex-wrap-reverse justify-content-evenly align-items-center py-3 px-2">
+
+            <div class="d-flex flex-column col-lg-5 galeria-texto px-3 py-4">
+                <p class="fs-5 text-light anim-right anim-pause-1 texto-1" id="texto1">
+                    Nuestra galería de fotos captura momentos inolvidables
+                    de nuestros eventos, fiestas épicas llenas de energía, donde cada
+                    imagen cuenta una historia única.
+                </p>
+                <p class="fs-3 py-5 fw-bold destacado anim-left anim-pause-2" id="texto2">
+                    ¿Estás listo para sumergirte en el mundo de la música y la diversión?
+                </p>
+                <div class="text-start pt-3 btn-galeria anim-fade-in anim-pause-3">
+                    <a href="https://wa.me/56972140096" target="_blank" rel="noopener noreferrer">
+                        <button class="btn fs-5 py-2 px-5 mx-auto">Contáctanos <i class="bi bi-whatsapp"></i></button>
+                    </a>
+                </div>
+            </div>
+
+            <video width="640" height="360" muted autoplay loop class="anim-left">
+                <source src="./assets/video/video-robot.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+
+        <div class="carrusel d-flex align-items-center w-100 mx-auto py-5 mt-3">
+
+            <div class="carrusel-imagenes">
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/1.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/2.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/3.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/4.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/7.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/8.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/9.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/14.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/11.png" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/13.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/12.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/10.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/16.jpg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/17.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/banqueteria.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/19.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/20.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/21.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/22.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/23.jpeg" alt="Imagen">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./assets/img/15.jpeg" alt="Imagen">
+                </div>
+            </div>
+        </div>
+        <div class="carrusel-controls text-center mx-auto pb-5">
+            <button class="carrusel-control carrusel-prev px-3">&#9664;</button>
+            <button class="carrusel-control carrusel-next px-3">&#9654;</button>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="bg-black text-light pt-5" id="footer">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center mx-auto py-5 gap-5">
+
+            <div class="d-flex flex-column text-center f-logo py-5 col-lg-3 col-md-3 col-sm-11 col-12 mx-auto footer-1">
+                <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" width="110px" alt="Logo"></a>
+                <p class="small py-3 flex-wrap">Llevamos la música y la diversión a tus eventos!</p>
+            </div>
+            <div
+                class="d-flex flex-column fs-5 text-center text-light py-5 col-lg-3 col-md-3 col-sm-10 col-12 mx-auto footer-2">
+                <a class="" href="#">Inicio</a>
+                <a class="" href="#servicios">Servicios</a>
+                <a class="" href="#packs">Packs</a>
+                <a class="" href="#nosotros">Quienes Somos</a>
+            </div>
+            <div
+                class="d-flex flex-column text-center f-contacto py-5 col-lg-3 col-md-3 col-sm-10 col-12 mx-auto footer-3">
+                <h4>Contáctanos!</h4>
+                <a href="https://wa.me/56972140096" target="_blank" rel="noopener noreferrer">
+                    <p class="text-nowrap"><i class="bi bi-telephone-fill"></i> +56 9 7214 0096</p>
+                </a>
+                <a href="mailto:contacto@rqs.cl" target="_blank" rel="noopener noreferrer">
+                    <p class="text-nowrap"><i class="bi bi-envelope"></i> contacto@rqsproducciones.cl</p>
+                </a>
+                <button type="button" class="btn fs-6 align-items-center mt-3 border-secondary w-75 mx-auto"
+                    id="fooBtnCotizar" data-bs-toggle="modal" data-bs-target="#modalForm">
+                    Formulario <i class="bi bi-check2-square fs-6 ps-2"></i>
+                </button>
+            </div>
+        </div>
+        <hr>
+        <div class="pt-1 pb-3">
+            <p class="text-center mx-auto text-secondary px-3">Copyright &copy; RQS 2023 | Desarrollado por OniriaLab
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</html>
