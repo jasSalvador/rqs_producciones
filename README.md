@@ -30,8 +30,4 @@ Este proyecto no requiere instalación adicional, ya que está destinado a ser u
 
 ## Autor
 
-Desarrollado por [Jasmin Salvador].
-
-## Licencia
-
-Este proyecto está licenciado bajo [Licencia XYZ]. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+Desarrollado por Jasmin Salvador.
