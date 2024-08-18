@@ -301,7 +301,6 @@ p.info-text {
     opacity: 1;
 }
 
-
 /*PACKS*/
 .packs {
     width: 100%;
@@ -405,35 +404,39 @@ p.info-text {
 .galeria .destacado {
     color: rgb(224, 213, 14);
 }
-.carrusel-imagenes {
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 50px 0;
+
+/*carrusel glider*/
+.carousel{
+    margin: 80px auto;    
 }
-.carrusel-imagen {
-    min-width: 300px;
-    max-width: 250px;
+.carousel-cont{
+    position: relative;
+}
+.carousel-lista{
+    overflow: hidden;
     height: 250px;
 }
-.carrusel-imagen img {
+.carousel-lista img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    padding: 0 2px;
+    padding: 2px;
     display: block;
 }
-.carrusel-imagen:hover {
-    transform: scale(1.3);
-    padding: 5px;
-    border: 1px solid rgb(224, 224, 224);
-    background-color: white;
+.carousel-indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
-.galeria video {
-    padding: 5px;
-    -webkit-box-shadow: 15px 15px 9px -12px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 15px 15px 9px -12px rgba(0, 0, 0, 0.7);
-    box-shadow: 15px 15px 9px -12px rgba(0, 0, 0, 0.7);
+.carousel-indicadores button {
+    background-color: #0e0e0e;
+    color: rgb(224, 213, 14);
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.carousel-indicadores button:hover {
+    background-color: #2b2b2a;
 }
 
 /*FOOTER*/
@@ -444,7 +447,12 @@ footer a {
 footer a:hover {
     color: #fae93a;
 }
-
+footer .link-coder{
+    color:  #9065E7;
+}
+footer .lux{
+    color: #02C7BE;
+}
 
 /*ANIMACIONES | textos, img*/
 @keyframes anim-up { 
@@ -519,10 +527,6 @@ footer a:hover {
         padding-left: 15px;
         text-align: center !important;
         margin: 0 auto !important;
-    }
-    .carrusel{
-        margin-top: 0 !important;
-        padding-top: 10px !important;
     }
 }
 
@@ -716,17 +720,13 @@ footer a:hover {
         -moz-box-shadow: 2px 2px 9px 5px rgba(0, 0, 0, 0.7);
         box-shadow: 2px 2px 9px 5px rgba(0, 0, 0, 0.7);
     }
-    .carrusel-imagen:hover {
-        transform: scale(1.1);
+    .carousel-lista{
+        width: 90%;
+        height: 300px;
     }
-    .btn-galeria {
-        text-align: center;
-        margin: 0 auto;
-        margin-top: -30px !important;
-    }
-    .galeria .carrusel {
-        padding: 0 !important;
-        margin-top: -10px !important;
+    .carousel-lista img{
+        object-fit: cover;
+        object-position: center;
     }
     footer{
         padding-top: 0 !important;

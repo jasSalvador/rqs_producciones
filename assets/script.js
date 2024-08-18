@@ -98,139 +98,141 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Carrusel
+window.addEventListener('load', function() {
+    const carouselList = document.querySelector('.carousel-lista');
+    if (!carouselList) return;
 
+    let glider = new Glider(carouselList, {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: {
+            prev: '.carousel-anterior',
+            next: '.carousel-siguiente'
+        },
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }
+        ]
+    });
 
-//carrusel
-const carrusel = document.querySelector(".carrusel-imagenes");
-let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-let intervalo = null;
-let step = 1.5;
+    let intervalo = 16; // Intervalo entre frames en milisegundos (aproximadamente 60 FPS)
+    let step = 1; // Paso del desplazamiento (en píxeles)
+    let direction = 'forward'; // Dirección inicial del desplazamiento
 
-const start = () => {
-    intervalo = setInterval(function () {
-        carrusel.scrollLeft += step;
+    let autoplay = setInterval(function() {
+        let currentScrollLeft = glider.ele.scrollLeft;
+        let newScrollLeft;
 
-        if (carrusel.scrollLeft >= maxScrollLeft) {
-            carrusel.scrollLeft = 0;
+        if (direction === 'forward') {
+            newScrollLeft = currentScrollLeft + step;
+        } else {
+            newScrollLeft = currentScrollLeft - step;
         }
-    }, 10);
-};
 
-const stop = () => {
-    clearInterval(intervalo);
-};
+        if (newScrollLeft >= glider.ele.scrollWidth - glider.ele.clientWidth) {
+            direction = 'backward'; // Cambia a dirección hacia atrás
+        } else if (newScrollLeft <= 0) {
+            direction = 'forward'; // Cambia a dirección hacia adelante
+        }
 
-const prevButton = document.querySelector(".carrusel-prev");
-const nextButton = document.querySelector(".carrusel-next");
+        glider.ele.scrollLeft = newScrollLeft;
+    }, intervalo);
 
-prevButton.addEventListener("click", () => {
-    stop();
-    carrusel.scrollLeft -= 100;
-});
+    // Pausa el autoplay cuando el cursor está sobre el carrusel
+    glider.ele.addEventListener('mouseover', function() {
+        clearInterval(autoplay);
+    });
 
-nextButton.addEventListener("click", () => {
-    stop();
-    carrusel.scrollLeft += 100;
-});
+    // Reinicia el autoplay cuando el cursor sale del carrusel
+    glider.ele.addEventListener('mouseout', function() {
+        autoplay = setInterval(function() {
+            let currentScrollLeft = glider.ele.scrollLeft;
+            let newScrollLeft;
 
-carrusel.addEventListener("mouseover", () => {
-    stop();
-});
+            if (direction === 'forward') {
+                newScrollLeft = currentScrollLeft + step;
+            } else {
+                newScrollLeft = currentScrollLeft - step;
+            }
 
-carrusel.addEventListener("mouseout", () => {
-    start();
-});
+            if (newScrollLeft >= glider.ele.scrollWidth - glider.ele.clientWidth) {
+                direction = 'backward'; // Cambia a dirección hacia atrás
+            } else if (newScrollLeft <= 0) {
+                direction = 'forward'; // Cambia a dirección hacia adelante
+            }
 
-document.querySelectorAll("a").forEach((enlace) => {
-    enlace.addEventListener("click", () => {
-        stop();
+            glider.ele.scrollLeft = newScrollLeft;
+        }, intervalo);
+    });
+
+    // Detener el carrusel cuando se hace clic en un enlace del navbar
+    document.querySelectorAll('.navbar-nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function() {
+            clearInterval(autoplay);
+        });
     });
 });
 
-start();
+// Añadimos el script para el desplazamiento suave
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar links
+    document.querySelectorAll('.navbar-nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
 
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                window.history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
 
+    // Footer links
+    document.querySelectorAll('footer a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
 
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetOffsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const yOffset = targetOffsetTop - navbarHeight;
 
-//PRUEBA TOUCH
-/* const carrusel = document.querySelector(".carrusel-imagenes");
-let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-let intervalo = null;
-let step = 1.5;
-
-const start = () => {
-    intervalo = setInterval(function () {
-        carrusel.scrollLeft += step;
-
-        if (carrusel.scrollLeft >= maxScrollLeft) {
-            carrusel.scrollLeft = 0;
-        }
-    }, 10);
-};
-
-const stop = () => {
-    clearInterval(intervalo);
-};
-
-const prevButton = document.querySelector(".carrusel-prev");
-const nextButton = document.querySelector(".carrusel-next");
-
-prevButton.addEventListener("click", () => {
-    stop();
-    carrusel.scrollLeft -= carrusel.clientWidth;
-});
-
-nextButton.addEventListener("click", () => {
-    stop();
-    carrusel.scrollLeft += carrusel.clientWidth;
-});
-
-carrusel.addEventListener("mouseover", () => {
-    stop();
-});
-
-carrusel.addEventListener("mouseout", () => {
-    start();
-});
-
-// Touch para dispositivos móviles
-let touchStartX = 0;
-let touchEndX = 0;
-
-carrusel.addEventListener("touchstart", (e) => {
-    stop();
-    touchStartX = e.touches[0].clientX;
-});
-
-carrusel.addEventListener("touchend", (e) => {
-    start();
-    touchEndX = e.changedTouches[0].clientX;
-
-    if (touchStartX - touchEndX > 50) {
-        carrusel.scrollLeft += carrusel.clientWidth;
-    } else if (touchEndX - touchStartX > 50) {
-        carrusel.scrollLeft -= carrusel.clientWidth;
-    }
-});
-
-document.querySelectorAll("a").forEach((enlace) => {
-    enlace.addEventListener("click", () => {
-        stop();
+                window.scrollTo({
+                    top: yOffset,
+                    behavior: 'smooth'
+                });
+                window.history.pushState(null, null, `#${targetId}`);
+            }
+        });
     });
 });
-
-start(); */
-
-
-
-
-
-
-
-
-
-
-
 
 
 //cambiar color-bg nav moviles
@@ -239,3 +241,6 @@ $(document).ready(function () {
         $('.navbar-custom').toggleClass('expanded');
     });
 });
+
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
